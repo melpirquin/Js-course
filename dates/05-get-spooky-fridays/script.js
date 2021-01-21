@@ -12,5 +12,27 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        // your code here
+        let x = document.getElementById("year").value; // this get the data inside the input
+
+        function Fridaythe13thsIn() {
+            let count = 0;
+            for (let month = 0; month < 12; month++) {
+                let d = new Date(x, month, 13);
+                if (d.getDay() == 5) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+
+
+        document.getElementById("year").value = Fridaythe13thsIn();
+
+    });
 
 })();
